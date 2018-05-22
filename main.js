@@ -1,5 +1,5 @@
 let clock = setInterval(function () {
-	let weekNames = ["poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"];
+	let weekNames = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
 
 	let d = new Date();
 	let first = document.querySelector('#first');
