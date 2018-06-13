@@ -19,3 +19,26 @@ let clock = setInterval(function () {
 	first.textContent = dateNow;
 	second.textContent = timeNow;
 }, 1000);
+
+
+const secHand = document.querySelector(".sec-hand");
+const minHand = document.querySelector(".min-hand");
+const hourHand = document.querySelector(".hour-hand");
+
+function setDate() {
+	const now = new Date();
+
+	const secs = now.getSeconds();
+	const secDegrees = (secs * 6) + 90;
+	secHand.style.transform = `translateY(-50%) rotate(${secDegrees}deg)`;
+
+	const mins = now.getMinutes();
+	const minDegrees = (mins * 6) + 90;
+	minHand.style.transform = `translateY(-50%) rotate(${minDegrees}deg)`;
+
+	const hour = now.getHours();
+	const hourDegrees = (hour * 30 + ((minDegrees - 90) / 12) + 90);
+	hourHand.style.transform = `translate(25%, -50%) rotate(${hourDegrees}deg)`;
+}
+
+setInterval(setDate, 1000);
