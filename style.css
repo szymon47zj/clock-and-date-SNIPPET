@@ -3,6 +3,13 @@ body {
 	padding: 20px 50px;
 	background-color: #bc9b9b;
 	font-size: 42px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.text {
+	text-align: center;
 }
 
 .clock {
